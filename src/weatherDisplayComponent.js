@@ -3,13 +3,26 @@ import Weather from "./weather";
 import FormWeather from "./formWeather";
 function WeatherDisplayComponent({ reduxState, getWeather }) {
   return (
-    <div>
+    <div className="weather_display">
       <FormWeather
         inputCityValue={reduxState.inputCity}
         inputCountryValue={reduxState.inputCountry}
         getWeather={getWeather}
       />
-      <Weather weather={reduxState.weather} />
+      <div className="weather_Days">
+        {reduxState.allDays.map((arrDay, i, arr) => {
+          console.log(arrDay);
+          return (
+            <Weather
+              key={i}
+              allDays={reduxState.allDays}
+              day={arrDay}
+              cityWeather={reduxState.cityWeather}
+              country={reduxState.country}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

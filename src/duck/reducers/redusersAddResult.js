@@ -8,7 +8,9 @@ const initiation = {
   weather: [],
   allDays: [],
   inputCity: "Odessa",
-  inputCountry: "ua"
+  inputCountry: "ua",
+  cityWeather: undefined,
+  country: undefined
 };
 
 function addresult(state = initiation, action) {
@@ -17,7 +19,9 @@ function addresult(state = initiation, action) {
       return {
         ...state,
         weather: action.payload,
-        allDays: action.payload.allDays
+        allDays: action.payload.allDays,
+        cityWeather: action.payload.city.name,
+        country: action.payload.city.country
       };
     case CHANGE_INPUT_CITY:
       return {
