@@ -4,9 +4,14 @@ import {
   change_input_country
 } from "./duck/actions/actions";
 import { connect } from "react-redux";
-function FormWeather({ inputCityValue, inputCountryValue, dispatch }) {
+function FormWeather({
+  inputCityValue,
+  inputCountryValue,
+  dispatch,
+  getWeather
+}) {
   return (
-    <form>
+    <form onSubmit={getWeather}>
       <div className="form-div">
         <input
           className="form-control"
