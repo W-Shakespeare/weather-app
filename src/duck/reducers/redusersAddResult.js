@@ -1,7 +1,8 @@
-import { WEATHER_FROM_SERVER } from "../types/types";
+import { WEATHER_FROM_SERVER, CHANGE_INPUT_CITY } from "../types/types";
 
 const initiation = {
-  weather: []
+  weather: [],
+  inputCity: "Odessa"
 };
 
 function addresult(state = initiation, action) {
@@ -10,6 +11,11 @@ function addresult(state = initiation, action) {
       return {
         ...state,
         weather: action.payload
+      };
+    case CHANGE_INPUT_CITY:
+      return {
+        ...state,
+        inputCity: action.payload
       };
     default:
       return state;

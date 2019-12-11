@@ -22,7 +22,7 @@ function WeatherDisplayContainer(props) {
       });
   };
 
-  return <WeatherDisplayComponent weather={props.reduxState.weather} />;
+  return <WeatherDisplayComponent reduxState={props.reduxState} />;
 }
 function mapStateToProps(state) {
   return {

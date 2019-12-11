@@ -1,11 +1,11 @@
 import React from "react";
 import Weather from "./weather";
 import FormWeather from "./formWeather";
-function WeatherDisplayComponent({ weather }) {
+function WeatherDisplayComponent({ reduxState }) {
   return (
     <div>
-      <FormWeather />
-      <Weather weather={weather} />
+      <FormWeather inputCityValue={reduxState.inputCity} />
+      <Weather weather={reduxState.weather} />
     </div>
   );
 }
