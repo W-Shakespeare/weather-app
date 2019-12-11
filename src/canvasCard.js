@@ -52,7 +52,7 @@ const line = (
   ctx.lineTo(xEnd, height);
   ctx.lineTo(xStart, height);
   ctx.lineTo(xStart, yStart);
-  ctx.fillStyle = "gray";
+  ctx.fillStyle = "gainsboro";
   ctx.stroke();
   ctx.fill();
 };

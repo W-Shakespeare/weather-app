@@ -1,7 +1,12 @@
 import React from "react";
 import Weather from "./weather";
 import FormWeather from "./formWeather";
-function WeatherDisplayComponent({ reduxState, getWeather }) {
+function WeatherDisplayComponent({
+  reduxState,
+  getWeather,
+  getArrEight,
+  concatArr
+}) {
   return (
     <div className="weather_display">
       <FormWeather
@@ -16,7 +21,11 @@ function WeatherDisplayComponent({ reduxState, getWeather }) {
             <Weather
               key={i}
               allDays={reduxState.allDays}
-              day={arrDay}
+              day={
+                arrDay.length === 0
+                  ? getArrEight(concatArr(reduxState.allDays))
+                  : arrDay
+              }
               cityWeather={reduxState.cityWeather}
               country={reduxState.country}
             />

@@ -59,6 +59,8 @@ function WeatherDisplayContainer(props) {
     <WeatherDisplayComponent
       reduxState={props.reduxState}
       getWeather={getWeather}
+      concatArr={concatArr}
+      getArrEight={getArrEight}
     />
   );
 }
@@ -75,6 +77,14 @@ const checkTown = town => {
   let reg = new RegExp(`${town}$`, "i");
   let u = Object.values(allTown);
   return u.some((it, i, ar) => ar[i].some(i => reg.test(i)));
+};
+const concatArr = arr => {
+  let arr2 = arr.reduce((acc, next) => acc.concat(next), []);
+  console.log(`CONCAT_ARR ${arr2}`);
+  return arr2;
+};
+const getArrEight = arr => {
+  return arr.filter((it, i) => (i < 8 ? true : false));
 };
 
 function mapStateToProps(state) {
