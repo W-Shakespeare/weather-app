@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import WeatherDisplayComponent from "./weatherDisplayComponent";
+import get_Weather_From_Server from "./duck/actions/actions";
 
 function WeatherDisplayContainer(props) {
   const [weather, setWeather] = useState([]);
@@ -17,6 +18,7 @@ function WeatherDisplayContainer(props) {
       .then(weatherNow => {
         setWeather({ ...weatherNow });
         console.log(weatherNow);
+        props.dispatch(get_Weather_From_Server(weatherNow));
       });
   };
 
