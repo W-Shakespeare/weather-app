@@ -6,6 +6,7 @@ import {
 
 const initiation = {
   weather: [],
+  allDays: [],
   inputCity: "Odessa",
   inputCountry: "ua"
 };
@@ -15,7 +16,8 @@ function addresult(state = initiation, action) {
     case WEATHER_FROM_SERVER:
       return {
         ...state,
-        weather: action.payload
+        weather: action.payload,
+        allDays: action.payload.allDays
       };
     case CHANGE_INPUT_CITY:
       return {

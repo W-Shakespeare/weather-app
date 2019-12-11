@@ -4,7 +4,7 @@ import {
   change_input_country
 } from "./duck/actions/actions";
 import { connect } from "react-redux";
-function FormWeather({ inputCityValue, dispatch }) {
+function FormWeather({ inputCityValue, inputCountryValue, dispatch }) {
   return (
     <form>
       <div className="form-div">
@@ -14,6 +14,7 @@ function FormWeather({ inputCityValue, dispatch }) {
           onChange={e => {
             e.preventDefault();
             dispatch(change_input_city(e.target.value));
+            dispatch(change_input_country(""));
           }}
           type="text"
           name="city"
