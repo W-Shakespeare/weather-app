@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store/index";
 import WeatherDisplayContainer from "./weatherDisplayContainer";
+import "./css/main.css";
 function Wrapper() {
   return (
     <div className="wrapper">

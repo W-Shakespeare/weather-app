@@ -1,0 +1,122 @@
+body {
+  font-family: monospace;
+  background-color: #ced4da;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.logo {
+  height: 40px;
+  text-align: center;
+  font-size: 25px;
+  color: #6c757d73;
+}
+.form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  background-color: black;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  background-color: #dee2e675;
+}
+
+.form-control:focus {
+  border-color: white !important;
+  box-shadow: none;
+  background-color: rgba(0, 255, 212, 0.04);
+}
+
+.row {
+  flex-direction: row-reverse;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.btn {
+  margin-top: 5px;
+}
+.btn-light {
+  background-color: #dae0e5;
+}
+
+.weather_Days {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  /* font-size: 15px; */
+  width: 380px;
+  flex-direction: column;
+  position: relative;
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-color: black;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.card:hover {
+  border-color: white;
+  transition: border-color 0.5s ease 0s;
+}
+.card-header {
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.card-body {
+  padding: 12px;
+}
+.card-footer {
+  text-align: center;
+  width: 100%;
+}
+.specificall_Day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.train {
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+}
+@media (max-width: 410px) {
+  .card {
+    width: 340px;
+    margin: 5px 10px;
+  }
+  canvas {
+    width: 300px;
+  }
+}
+@media (max-width: 365px) {
+  .card {
+    width: 320px;
+    margin: 5px 0px;
+  }
+  canvas {
+    width: 280px;
+  }
+}
+@media (max-width: 335px) {
+  .card {
+    width: 310px;
+    margin: 5px 0px;
+  }
+  canvas {
+    width: 270px;
+  }
+}
