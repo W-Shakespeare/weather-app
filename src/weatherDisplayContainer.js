@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WeatherDisplayComponent from "./weatherDisplayComponent";
-import get_Weather_From_Server from "./duck/actions/actions";
-
+import { get_Weather_From_Server } from "./duck/actions/actions";
+import { connect } from "react-redux";
 function WeatherDisplayContainer(props) {
   const [weather, setWeather] = useState([]);
   useEffect(() => {
@@ -22,6 +22,14 @@ function WeatherDisplayContainer(props) {
       });
   };
 
-  return <WeatherDisplayComponent weather={weather} />;
+  return <WeatherDisplayComponent weather={props.reduxState.weather} />;
 }
-export default WeatherDisplayContainer;
+function mapStateToProps(state) {
+  return {
+    reduxState: state
+  };
+}
+export default connect(
+  mapStateToProps,
+  null
+)(WeatherDisplayContainer);
