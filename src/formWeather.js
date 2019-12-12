@@ -24,6 +24,7 @@ function FormWeather({
           type="text"
           name="city"
           placeholder="Введите город"
+          required={inputCityValue === "" ? true : false}
         ></input>
         <input
           className="form-control"
