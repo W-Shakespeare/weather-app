@@ -207,10 +207,10 @@ const canvas = (props, ctx) => {
       text(
         {
           text: obj.selectedParameter,
-          textX: onePartW - 20,
+          textX: onePartW - 22,
           textY:
             obj.selectedParameterName === "pressure"
-              ? h / 2 - onePartY * (obj.selectedParameter - 998)
+              ? h / 2 - onePartY * (obj.selectedParameter - 993)
               : h / 2 - onePartY * obj.selectedParameter - 7
         },
         ctx
@@ -247,7 +247,7 @@ const canvas = (props, ctx) => {
         textX:
           obj.selectedParameterName === "pressure"
             ? partWidthEnd - 27
-            : partWidthEnd - 20,
+            : partWidthEnd - 22,
         textY: partHeightEnd - 7
       },
       ctx

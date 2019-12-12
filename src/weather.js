@@ -15,7 +15,7 @@ function Weather(props) {
               className="img-fluid"
               src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
             ></img>
-            <p>{description}</p>
+            <p className="p-logo">{description}</p>
           </div>
         </div>
         <div className="card-body">

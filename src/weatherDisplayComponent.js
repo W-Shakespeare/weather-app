@@ -9,6 +9,7 @@ function WeatherDisplayComponent({
 }) {
   return (
     <div className="weather_display">
+      <div className="logo">WEATHER</div>
       <FormWeather
         inputCityValue={reduxState.inputCity}
         inputCountryValue={reduxState.inputCountry}
