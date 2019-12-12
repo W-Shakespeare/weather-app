@@ -10,7 +10,8 @@ const initiation = {
   inputCity: "Odessa",
   inputCountry: "ua",
   cityWeather: undefined,
-  country: undefined
+  country: undefined,
+  population: undefined
 };
 
 function addresult(state = initiation, action) {
@@ -21,7 +22,8 @@ function addresult(state = initiation, action) {
         weather: action.payload,
         allDays: action.payload.allDays,
         cityWeather: action.payload.city.name,
-        country: action.payload.city.country
+        country: action.payload.city.country,
+        population: action.payload.city.population
       };
     case CHANGE_INPUT_CITY:
       return {

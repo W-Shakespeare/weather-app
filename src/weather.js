@@ -1,7 +1,7 @@
 import React from "react";
 import CanvasCard from "./canvasCard";
 function Weather(props) {
-  const { day, country, cityWeather, allDays } = props;
+  const { day, country, cityWeather, allDays, population } = props;
   let icon = day[0].weather[0].icon;
   let description = day[0].weather[0].description;
   return (
@@ -21,6 +21,7 @@ function Weather(props) {
         <div className="card-body">
           <p className="card-text">{cityWeather}</p>
           <p>{country}</p>
+          <p>{`Население ${population} чел.`}</p>
           <p>{`Температура ${day[0].main.temp} °C`} </p>
           <p>{`Влажность ${day[0].main.humidity} %`}</p>
           <p>{`Давления ${day[0].main.pressure} (мб)`}</p>

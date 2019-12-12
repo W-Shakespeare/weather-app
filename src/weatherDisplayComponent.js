@@ -29,6 +29,7 @@ function WeatherDisplayComponent({
               }
               cityWeather={reduxState.cityWeather}
               country={reduxState.country}
+              population={reduxState.population}
             />
           );
         })}
