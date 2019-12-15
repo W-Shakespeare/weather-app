@@ -29,7 +29,7 @@ function Weather(props) {
           <p>{`Направления ветра ${day[0].wind.deg} градусов`}</p>
         </div>
         <div className="card-footer">
-          <p>{`${day[0].thisDay} Число`}</p>
+          <p>{`${day[0].thisMonth} ${day[0].thisDay}`}</p>
           <p>Температура</p>
           <CanvasCard
             allDays={allDays}

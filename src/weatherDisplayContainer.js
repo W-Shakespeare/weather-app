@@ -41,7 +41,10 @@ function WeatherDisplayContainer(props) {
             let changeWeatherDay = weatherDay.map(it => {
               return {
                 ...it,
-                thisDay: `${nextDay.getDate()}`
+                thisDay: `${nextDay.getDate()}`,
+                thisMonth: `${nextDay.toLocaleString("ru", {
+                  month: "long"
+                })}`
               };
             });
             allDays.push(changeWeatherDay);
