@@ -52,7 +52,8 @@ const line = (
   ctx.lineTo(xEnd, height);
   ctx.lineTo(xStart, height);
   ctx.lineTo(xStart, yStart);
-  ctx.fillStyle = "gainsboro";
+  // ctx.fillStyle = "gainsboro";
+  ctx.fillStyle = props.color;
   ctx.stroke();
   ctx.fill();
 };

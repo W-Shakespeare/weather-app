@@ -37,6 +37,7 @@ function Weather(props) {
             width="330"
             height="100"
             item="temp"
+            color="rgba(240, 128, 128, 0.156)"
           />
           <br></br>
           <p>Давление</p>
@@ -46,6 +47,7 @@ function Weather(props) {
             width="330"
             height="100"
             item="pressure"
+            color="rgba(144, 238, 144, 0.152)"
           />
           <br></br>
 
@@ -56,6 +58,7 @@ function Weather(props) {
             width="330"
             height="100"
             item="humidity"
+            color="rgba(32, 178, 171, 0.144)"
           />
         </div>
       </div>
